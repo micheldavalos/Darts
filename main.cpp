@@ -1,10 +1,10 @@
 #include <iostream>
-#include <vector>
+// #include <vector>
 #include <cmath>
 
 using namespace std;
 
-vector<pair<int, int>> tiros(1000000);
+// vector<pair<int, int>> tiros(1000000);
 
 int main() {
  int T;
@@ -15,14 +15,12 @@ int main() {
      cin >> n;
      
      int x, y;
+     long long score = 0;
      
      for (long long i = 0; i < n; i++) {
         cin >> x >> y;
-        tiros[i] = make_pair(x, y);        
-     }
-     long long score = 0;
-     for (long long i = 0; i < n; i++) {
-        int s = (sqrt((tiros[i].first*tiros[i].first) + (tiros[i].second*tiros[i].second))/20 - 11)*-1;
+//         tiros[i] = make_pair(x, y);    
+        int s = (sqrt((x*x) + (y*y))/20 - 11)*-1;
 //         cout << s << endl;
         if (s > 10 ) {
             s = 10;
